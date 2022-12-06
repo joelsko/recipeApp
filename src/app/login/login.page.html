@@ -9,15 +9,15 @@
       <ion-label position="floating">Email</ion-label>
       <ion-input type="email" formControlName='email'></ion-input>
     </ion-item>
-    <ion-label color="danger" ngIf="form.get('email').touched && form.get('email').errors?.email">Email is invalid</ion-label>
+    
+    
     <ion-item>
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" formControlName='password'></ion-input>
     </ion-item>
-    <ion-label color="danger">Password is invalid</ion-label>
     <ion-button color="dark" size="full" [disabled]="!form.valid">Login</ion-button>
-    <ion-button color="medium" size="full">Continue without login</ion-button>
-    <ion-button color="dark" fill="clear" size="full">Forgot password?</ion-button>
+    <ion-button color="secondary" size="full">Continue without login</ion-button>
+    <ion-button [routerLink]="['/forgot-password']" color="dark" fill="clear" size="full">Forgot password?</ion-button>
     <ion-button [routerLink]="['/createaccount']" color="dark" fill="clear" size="full"><b>Create an account</b></ion-button>
   </ion-card-content>
  </ion-card>

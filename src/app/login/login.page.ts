@@ -18,5 +18,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     this.form = new LoginPageForm(this.formBuilder).createForm();
   }
+  login(){
+    this.router.navigate(['home']);
+  }
 
 }
